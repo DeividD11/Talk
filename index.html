@@ -20,13 +20,26 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Carta para Mi preciosa princesa">
     <meta property="og:description" content="Carta romántica interactiva para iPhone 14 Pro">
+    <meta property="og:image" content="/images/carta-preview.png">
+    <meta property="og:image:alt" content="Preview de la carta romántica con texto animado">
+    <meta property="og:image:secure_url" content="https://tudominio.com/images/carta-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://tudominio.com/ruta-actual">
+    <meta property="og:site_name" content="Cartas Románticas">
     <meta property="og:locale" content="es_CO">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Carta para Mi preciosa princesa">
     <meta name="twitter:description"
-        content="Carta romántica interactiva: una experiencia táctil optimizada para iPhone 14 Pro, Android y escritorio.">
+        content="Carta romántica interactiva: una experiencia táctil y optimizada para iPhone 14 Pro, Android y escritorio.">
+    <meta name="twitter:image" content="/images/carta-preview.png">
+    <meta name="twitter:image:alt" content="Preview de la carta romántica con texto animado">
+    <meta name="twitter:image:secure_url" content="https://tudominio.com/images/carta-preview.png">
+    <meta name="twitter:site" content="@tuusuario">
+    <meta name="twitter:creator" content="@tuusuario">
+    <meta name="twitter:domain" content="tudominio.com">
 
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -39,85 +52,145 @@
 
     <!-- Structured data (Article) -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Carta para Mi preciosa princesa",
-    "description": "Carta romántica interactiva optimizada para móviles y escritorio.",
-    "author": {
-      "@type": "Person",
-      "name": "Dev"
-    },
-    "datePublished": "2025-08-12",
-    "image": "/images/carta-preview.png",
-    "inLanguage": "es-CO"
-  }
-  </script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Carta para Mi preciosa princesa",
+            "description": "Carta romántica interactiva optimizada para móviles y escritorio.",
+            "author": {
+                "@type": "Person",
+                "name": "Dev"
+            },
+            "datePublished": "2025-08-12",
+            "dateModified": "2026-03-11",
+            "image": "/images/carta-preview.png",
+            "inLanguage": "es-CO",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Cartas Románticas",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "/images/logo.png"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://tudominio.com/ruta-actual"
+            }
+        }
+    </script>
 
     <style>
         :root {
-            /* safe-area insets for notch devices */
+            /* Variables globales (comunes a todos los temas) */
             --safe-top: env(safe-area-inset-top, 0px);
             --safe-bottom: env(safe-area-inset-bottom, 0px);
-
-            /* color palette */
-            --color-bg-light-start: #f2cc8f;
-            --color-bg-light-end: #fff1e0;
-            --color-bg-dark-start: #4b3f72;
-            --color-bg-dark-end: #1a1a1a;
-            --color-bg-gradient: linear-gradient(135deg, var(--color-bg-light-start), var(--color-bg-light-end));
-            --color-text: #333;
-            --color-text-dark: #eee;
-            --color-primary: #e07a5f;
-            --color-accent: #f2cc8f;
-            --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
-            --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-
-            /* typography */
             --font-base: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-fancy: 'Dancing Script', cursive;
             --fs-min: 14px;
             --fs-max: 18px;
-
-            /* spacing scale */
             --space-xs: clamp(4px, 1vw, 8px);
             --space-sm: clamp(8px, 2vw, 16px);
             --space-md: clamp(12px, 3vw, 24px);
             --space-lg: clamp(16px, 4vw, 32px);
-
-            /* radii */
             --radius-sm: 0.5rem;
             --radius-md: 1rem;
             --radius-lg: 2rem;
-
-            /* animation speed */
             --speed: 0.6s;
-
-            /* reservar proporción y tamaño intrínseco para imágenes */
             --ar-img-default: 16/9;
             --img-intrinsic-width: 800px;
             --img-intrinsic-height: 450px;
             transition: background var(--speed) ease, color var(--speed) ease;
-            --color-bg-gradient: linear-gradient(135deg,
-                    var(--color-bg-light-start),
-                    var(--color-bg-light-end));
+        }
+
+        /* Tema Light (por defecto) */
+        :root:not([data-theme="dark"]) {
+            --color-bg-start: #f2cc8f;
+            --color-bg-end: #fff1e0;
             --color-text: #333;
+            --color-primary: #e07a5f;
+            --color-accent: #f2cc8f;
+            --color-button-bg: #e07a5f;
+            --color-button-text: #fff;
+            --color-button-hover: #c2595a;
+            --color-link: #e07a5f;
+            --color-link-hover: #b84d4d;
+            --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+            --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tema Dark */
+        [data-theme="dark"] {
+            --color-bg-start: #4b3f72;
+            --color-bg-end: #1a1a1a;
+            --color-text: #eee;
+            --color-primary: #f2cc8f;
+            --color-accent: #4b3f72;
+            --color-button-bg: #f2cc8f;
+            --color-button-text: #333;
+            --color-button-hover: #e0b87a;
+            --color-link: #f2cc8f;
+            --color-link-hover: #d4a76a;
+            --shadow-sm: 0 4px 10px rgba(255, 255, 255, 0.05);
+            --shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Variables derivadas (gradientes, etc.) */
+        :root {
+            --color-bg-gradient: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
         }
 
         @media (prefers-color-scheme: dark) {
-            :root:not([data-theme]) {
-                --color-bg-gradient: linear-gradient(135deg,
-                        var(--color-bg-dark-start),
-                        var(--color-bg-dark-end));
-                --color-text: var(--color-text-dark);
+            :root:not([data-theme="light"]) {
+                --color-bg-start: #4b3f72;
+                --color-bg-end: #1a1a1a;
+                --color-text: #eee;
+                --color-primary: #f2cc8f;
+                --color-accent: #4b3f72;
+                --color-button-bg: #f2cc8f;
+                --color-button-text: #333;
+                --color-button-hover: #e0b87a;
+                --color-link: #f2cc8f;
+                --color-link-hover: #d4a76a;
+                --shadow-sm: 0 4px 10px rgba(255, 255, 255, 0.05);
+                --shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
             }
         }
 
-        [data-theme="dark"] {
-            --color-bg-gradient: linear-gradient(135deg,
-                    var(--color-bg-dark-start),
-                    var(--color-bg-dark-end));
-            --color-text: var(--color-text-dark);
+        /* Tema High-Contrast (automático si el usuario lo prefiere) */
+        @media (prefers-contrast: high) {
+            :root {
+                --color-text: #000;
+                --color-bg-start: #fff;
+                --color-bg-end: #fff;
+                --color-primary: #000;
+                --color-accent: #000;
+                --color-button-bg: #000;
+                --color-button-text: #fff;
+                --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+                --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            }
+
+            [data-theme="dark"] {
+                --color-text: #fff;
+                --color-bg-start: #000;
+                --color-bg-end: #000;
+                --color-primary: #fff;
+                --color-accent: #fff;
+                --color-button-bg: #fff;
+                --color-button-text: #000;
+            }
+        }
+
+        /* Permitir overrides personalizados (ej. para testing) */
+        :root {
+            --custom-primary: var(--color-primary);
+            /* Fallback a default */
+        }
+
+        .card {
+            background: var(--custom-primary);
+            /* Ejemplo de uso */
         }
 
         html {
@@ -137,7 +210,10 @@
         main {
             /* coment: frena rebotes de scroll y evita propagación de overscroll */
             overscroll-behavior: contain;
-            transition: background var(--speed) ease, color var(--speed) ease;
+            transition: background var(--speed) ease, color 0.3s ease;
+            /* Más rápida para color */
+            contain: layout;
+            /* Limita repaints al cambiar temas */
         }
 
         body {
@@ -193,9 +269,6 @@
             /* coment: habilita container queries en el ancho */
             container-name: card;
             /* coment: nombra el contenedor para referenciar */
-        }
-
-        .card {
             background-color: var(--color-accent);
             /* coment: respaldo color sólido */
             background-image: var(--color-bg-gradient);
@@ -273,8 +346,7 @@
         }
 
         .card:hover {
-            will-change: transform, opacity;
-            /* coment: crea capa GPU solo al interactuar */
+            will-change: transform, background-position;
             transform: translateY(-4px);
             background-position: 80% 20%;
             /* coment: desplaza gradiente al interactuar */
@@ -336,11 +408,13 @@
             padding: max(0.75rem, 22px) max(1rem, 22px);
             min-width: 44px;
             box-shadow: var(--shadow);
-            transition: transform var(--speed) ease,
-                box-shadow var(--speed) ease;
+            transition: background 0.2s ease, color 0.2s ease, transform var(--speed) ease, box-shadow var(--speed) ease;
+            will-change: background, color, transform;
+            /* Optimiza GPU */
             min-height: 44px;
             user-select: none;
             /* coment: evita selección accidental de texto */
+            cursor: pointer;
         }
 
         @media (pointer: coarse) {
@@ -384,6 +458,7 @@
             .skip,
             button.main {
                 transition: box-shadow var(--speed) ease;
+                /* coment: omite movimiento de fondo si reduce-motion */
             }
 
             .toggle:hover,
@@ -401,14 +476,47 @@
 
         @media (forced-colors: active) {
 
-            .toggle:hover,
+            /* coment: deshabilitar ajustes automáticos de forced-colors */
+            * {
+                forced-color-adjust: none;
+            }
+
+            /* coment: fondo y texto principales con colores de sistema */
+            body {
+                background-color: Canvas;
+                color: CanvasText;
+            }
+
+            /* coment: tarjetas con borde y fondo de alto contraste */
+            .card {
+                background-color: Field;
+                border: 2px solid CanvasText;
+                color: CanvasText;
+            }
+
+            /* coment: controles interactivos adaptados al modo forzado */
+            .toggle,
+            .skip,
+            button.main {
+                background-color: ButtonFace;
+                color: ButtonText;
+            }
+
+            /* coment: foco muy visible usando Highlight */
             .toggle:focus-visible,
-            .skip:hover,
             .skip:focus-visible,
-            button.main:hover,
             button.main:focus-visible {
-                box-shadow: none;
                 outline: 2px solid Highlight;
+                outline-offset: var(--space-sm);
+            }
+
+            /* coment: barra de progreso siempre legible */
+            .progress {
+                background-color: GrayText;
+            }
+
+            .progress-bar {
+                background-color: Highlight;
             }
         }
 
@@ -443,6 +551,7 @@
             margin-bottom: var(--space-sm);
             min-height: calc(1rem * 1.2 * 3);
             /* coment: espacio para 3 líneas con line-height 1.2 */
+            line-height: 1.6;
         }
 
         .progress {
@@ -634,9 +743,9 @@
             <h1 id="title">Para Mi preciosa princesa</h1>
 
             <nav class="controls" aria-label="Controles de la carta">
-                <button type="button" class="toggle" id="theme-toggle" aria-label="Cambiar tema"
-                    aria-pressed="false">🌙</button>
-                <button type="button" class="skip" id="skip-btn" aria-label="Saltar animación">⏭️</button>
+                <button type="button" class="toggle" id="theme-toggle" aria-label="Cambiar a tema oscuro" aria-pressed="false">🌙</button>
+                <button type="button" class="skip" id="skip-btn" aria-label="Saltar animación de escritura" aria-describedby="skip-description">⏭️</button>
+                <div id="skip-description" class="visually-hidden">Presiona para completar la escritura de la carta inmediatamente.</div>
             </nav>
         </header>
 
@@ -647,13 +756,11 @@
             </article>
 
             <div class="progress" aria-label="Barra de progreso de lectura">
-                <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                    aria-valuenow="0"></div>
+                <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
             </div>
 
-            <button type="button" id="btn-sorpresa" class="main" aria-controls="sorpresa" aria-expanded="false">Ver
-                sorpresa</button>
-
+            <button type="button" id="btn-sorpresa" class="main" aria-controls="sorpresa" aria-expanded="false" aria-describedby="sorpresa-description">Ver sorpresa</button>
+            <div id="sorpresa-description" class="visually-hidden">Revela un mensaje especial de amor.</div>
             <div id="sorpresa" aria-label="Mensaje sorpresa" aria-live="assertive" aria-hidden="true">
                 ¡Te amo más allá de las estrellas! ⭐
             </div>
@@ -665,11 +772,27 @@
     </main>
 
     <script defer>
-
-        (function () {
+        (function() {
             'use strict';
 
-            // --- Configuración ---
+            // Polyfills para compatibilidad
+            if (!window.requestAnimationFrame) {
+                window.requestAnimationFrame = (cb) => setTimeout(cb, 16); // ~60fps
+                window.cancelAnimationFrame = clearTimeout;
+            }
+
+            // Fallback para localStorage
+            const storage = (() => {
+                try {
+                    return window.localStorage;
+                } catch (e) {
+                    return {
+                        getItem: () => null,
+                        setItem: () => {},
+                        removeItem: () => {}
+                    };
+                }
+            })();
             const CHAR_INTERVAL_MS = 50;
             const DOUBLE_TAP_MS = 300;
             const VIBRATE_ENABLED =
@@ -680,7 +803,7 @@
                 typeof window !== 'undefined' &&
                 window.matchMedia &&
                 window.matchMedia('(prefers-reduced-motion: reduce)')
-                    .matches;
+                .matches;
 
             // --- Mensaje (mantengo exactamente el texto original) ---
             const MSG = `Amor mío,
@@ -728,7 +851,11 @@ Tu Inge.
             // --- Helpers ---
             function safeVibrate(pattern) {
                 if (VIBRATE_ENABLED) {
-                    try { navigator.vibrate(pattern); } catch (e) { /* ignore */ }
+                    try {
+                        navigator.vibrate(pattern);
+                    } catch (e) {
+                        /* ignore */
+                    }
                 }
             }
 
@@ -753,7 +880,10 @@ Tu Inge.
                 if (finished) return;
                 finished = true;
                 running = false;
-                if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                }
                 // Escribir el texto completo de forma atómica:
                 cont.textContent = MSG;
                 setProgressRatio(1);
@@ -845,7 +975,11 @@ Tu Inge.
                 sorpresa.style.display = next ? 'block' : 'none';
                 if (next) {
                     // animar por CSS si existe; solo forzamos reflow mínimo para que la animación empiece
-                    try { sorpresa.style.animation = 'fadeIn 0.5s ease forwards'; } catch (err) { /* ignore */ }
+                    try {
+                        sorpresa.style.animation = 'fadeIn 0.5s ease forwards';
+                    } catch (err) {
+                        /* ignore */
+                    }
                 }
                 safeVibrate([30, 20, 30]);
             }
@@ -871,7 +1005,9 @@ Tu Inge.
                     }
                 };
                 if (supportsRequestIdle) {
-                    requestIdleCallback(save, { timeout: 2000 });
+                    requestIdleCallback(save, {
+                        timeout: 2000
+                    });
                 } else {
                     setTimeout(save, 0);
                 }
@@ -939,7 +1075,9 @@ Tu Inge.
 
             // Ejecutar cuando el DOM esté listo (este script debe colocarse con defer)
             if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', init, { once: true });
+                document.addEventListener('DOMContentLoaded', init, {
+                    once: true
+                });
             } else {
                 // Ya listo
                 init();
@@ -950,7 +1088,9 @@ Tu Inge.
             try {
                 window.__cartaApp = window.__cartaApp || {};
                 window.__cartaApp.finishTyping = finishTyping;
-            } catch (e) { /* ignore non-writable window in some envs */ }
+            } catch (e) {
+                /* ignore non-writable window in some envs */
+            }
 
         }());
     </script>
