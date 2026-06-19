@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Autenticación segura con Supabase usando HTML, CSS y JavaScript puro." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Auth MVC | Supabase</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <script type="module" src="./assets/js/app.js"></script>
+</head>
+<body>
+  <noscript>Esta aplicación requiere JavaScript para funcionar.</noscript>
+
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Proyecto frontend estático</p>
+      <h1 id="hero-title">Acceso seguro con Supabase</h1>
+      <p class="hero-copy">
+        Registro, inicio de sesión, cierre de sesión y persistencia de sesión con una arquitectura MVC limpia.
+      </p>
+    </section>
+
+    <section class="card" id="auth-view" aria-labelledby="auth-title">
+      <div class="card-header">
+        <div>
+          <p class="card-kicker" id="mode-kicker">Bienvenido</p>
+          <h2 id="auth-title">Inicia sesión</h2>
+        </div>
+        <button
+          class="ghost-button"
+          id="toggle-mode-btn"
+          type="button"
+          aria-label="Cambiar entre iniciar sesión y registrarse"
+        >
+          Cambiar
+        </button>
+      </div>
+
+      <div id="message-area" class="message-area" role="status" aria-live="polite" aria-atomic="true"></div>
+
+      <div id="inline-action" class="inline-action hidden" aria-live="polite">
+        <p id="inline-action-text" class="inline-action__text"></p>
+        <button id="resend-confirmation-btn" class="ghost-button" type="button">
+          Reenviar confirmación
+        </button>
+      </div>
+
+      <form id="auth-form" class="auth-form" novalidate>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="correo@ejemplo.com"
+            required
+          />
+          <small class="field-error" data-error-for="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <div class="password-row">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Mínimo 8 caracteres"
+              required
+            />
+            <button class="icon-button" id="toggle-password-btn" type="button" aria-label="Mostrar u ocultar contraseña">👁️</button>
+          </div>
+          <small class="field-error" data-error-for="password"></small>
+        </div>
+
+        <div class="field" id="confirm-password-field">
+          <label for="confirmPassword">Confirmar contraseña</label>
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            autocomplete="new-password"
+            placeholder="Repite la contraseña"
+          />
+          <small class="field-error" data-error-for="confirmPassword"></small>
+        </div>
+
+        <button id="submit-btn" class="primary-button" type="submit">
+          Iniciar sesión
+        </button>
+      </form>
+
+      <p class="helper-text" id="form-helper">
+        Usa tu correo y contraseña para entrar.
+      </p>
+    </section>
+
+    <section class="card dashboard hidden" id="dashboard-view" aria-labelledby="dashboard-title">
+      <div class="card-header">
+        <div>
+          <p class="card-kicker">Sesión activa</p>
+          <h2 id="dashboard-title">Dashboard</h2>
+        </div>
+        <button class="ghost-button danger" id="logout-btn" type="button">
+          Cerrar sesión
+        </button>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="info-panel">
+          <h3>Usuario autenticado</h3>
+          <p id="user-email" class="mono"></p>
+          <p id="user-id" class="mono muted"></p>
+        </article>
+
+        <article class="info-panel">
+          <h3>Estado</h3>
+          <p id="session-status">Verificando sesión…</p>
+          <p class="muted">La vista se protege en el cliente y se sincroniza con Supabase Auth.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
